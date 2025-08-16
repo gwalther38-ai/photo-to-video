@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Photo ▶ Video</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo ▶ Video | 写真が動くと心が動く</title>
+  <meta name="description" content="古い写真をAIでカラー化・高画質化して短尺ムービーに。フォロワー獲得キャンペーン実施中。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html{scroll-behavior:smooth}</style>
 </head>
-<body>
-  <h1>🎉 サイト公開テスト！</h1>
-  <p>ここが見えたら GitHub Pages 成功です 🚀</p>
+<body class="bg-gradient-to-b from-white to-slate-50 text-slate-800">
+
+  <!-- ========== おしゃれなキャンペーン告知 ========== -->
+  <section class="px-4 pt-6">
+    <div class="mx-auto max-w-5xl">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-50 via-amber-50 to-rose-50 ring-1 ring-slate-200 shadow-sm">
+        <div class="absolute -top-24 -right-16 h-48 w-48 rounded-full bg-gradient-to-tr from-rose-200/50 to-amber-200/40 blur-3xl"></div>
+        <div class="relative px-6 py-7 md:px-10 md:py-9">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/70 ring-1 ring-slate-200 text-xl">🎉</span>
+            <h2 class="text-xl md:text-2xl font-extrabold tracking-tight">フォロワー獲得キャンペーン開催中</h2>
+          </div>
+
+          <ul class="mt-5 space-y-2.5 text-[15px] md:text-base">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5">✅</span>
+              <span><b>フォロー</b>してくれたら → <b>高画質カラー化 3枚無料</b></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5">🔁</span>
+              <span><b>メンション</b>して拡散してくれたら → <b>高画質カラー化 3枚無料</b> ＋ <b>動画3本無料</b></span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-xs text-slate-500">※無許可にSNSに掲載することはありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ヒーロー ========== -->
+  <header class="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">写真が動くと心が動く</h1>
+    <p class="mt-4 text-slate-600">AIでカラー化・高画質化し、静止画を短尺ムービーへ。古い写真や白黒写真も、自然な色と質感でいまに蘇ります。</p>
+  </header>
+
+  <!-- ========== サンプル（9:16縦動画） ========== -->
+  <section id="samples" class="mx-auto max-w-6xl px-4 pb-16">
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- 動画化サンプル -->
+      <div class="rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+        <div class="p-5">
+          <h3 class="text-sm font-semibold text-slate-500">動画化サンプル</h3>
+        </div>
+        <div class="px-5 pb-5">
+          <div class="aspect-[9/16] overflow-hidden rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 shadow-inner">
+            <!-- 置き換え：/videos/animate-sample.mp4 -->
+            <video
+              class="h-full w-full object-cover"
+              src="videos/animate-sample.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            ></video>
+          </div>
+        </div>
+      </div>
+
+      <!-- カラー化サンプル -->
+      <div class="rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+        <div class="p-5">
+          <h3 class="text-sm font-semibold text-slate-500">カラー化サンプル</h3>
+        </div>
+        <div class="px-5 pb-5">
+          <div class="aspect-[9/16] overflow-hidden rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 shadow-inner">
+            <!-- 置き換え：/videos/colorize-sample.mp4 -->
+            <video
+              class="h-full w-full object-cover"
+              src="videos/colorize-sample.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            ></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-4 text-xs text-slate-500">※自動再生は無音です。音声付きはタップして再生してください。</p>
+  </section>
+
+  <footer class="py-10 text-center text-xs text-slate-500">
+    © 2025 Photo ▶ Video　SUNASUKE
+  </footer>
 </body>
 </html>
