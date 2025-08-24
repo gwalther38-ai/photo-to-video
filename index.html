@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>スナスケ　AIで写真復活　もう一度　逢いたい人がいる</title>
-  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。" />
+  <title data-i18n="title">スナスケ📷AIで写真復活　もう一度逢いたい人がいる</title>
+  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。" data-i18n-meta="description-ja" />
+  <meta name="description" content="Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent." data-i18n-meta="description-en" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +13,7 @@
   <!-- Google Fonts 明朝系 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind の設定上書き -->
+  <!-- Tailwind 設定：serif を Noto Serif JP に -->
   <script>
     tailwind.config = {
       theme: {
@@ -27,20 +28,37 @@
 
   <style>
     html { scroll-behavior: smooth; }
+    /* description を2つ入れているので、JS適用前は最初のmetaだけ有効。
+       起動時にJSで適切な方へ切替します。*/
   </style>
 </head>
 
 <body class="min-h-screen text-gray-200 bg-gradient-to-br from-[#0b0b0e] via-[#111214] to-[#1a1b1f] font-serif">
+
+  <!-- 言語切替ボタン（右上固定） -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="langToggle"
+      class="px-3 py-1.5 text-sm rounded-full border border-yellow-400/60 text-yellow-300 hover:bg-yellow-500/10 transition"
+      aria-label="Toggle language">
+      日本語 / EN
+    </button>
+  </div>
 
   <!-- Hero -->
   <section class="relative text-center py-16 md:py-24">
     <!-- ほんのり金色のグロー -->
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.12),rgba(0,0,0,0)_55%)]"></div>
 
-    <h1 class="relative z-10 text-3xl md:text-6xl font-extrabold leading-tight tracking-wide">
+    <h1 class="relative z-10 text-3xl md:text-6xl font-extrabold leading-tight tracking-wide" data-i18n="hero.title">
       もう一度逢いたい人がいる
     </h1>
-    <p class="relative z-10 mt-5 text-lg md:text-2xl bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+
+    <!-- 中央メッセージ -->
+    <p class="relative z-10 mt-6 text-base md:text-xl text-gray-300 leading-relaxed" data-i18n="hero.message">
+      過ぎ去った時間は戻せないけれど、写真が蘇れば、想いは永遠に生き続ける。
+    </p>
+
+    <p class="relative z-10 mt-5 text-lg md:text-2xl bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="hero.subtitle">
       スナスケ📷AIで写真復活
     </p>
   </section>
@@ -49,7 +67,7 @@
   <section id="pricing" class="py-14">
     <div class="mx-auto max-w-3xl px-5 text-center">
       <h2 class="text-2xl md:text-3xl font-bold tracking-wide">
-        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="pricing.heading">
           料金
         </span>
       </h2>
@@ -61,7 +79,7 @@
 
         <!-- ①カラー化 -->
         <div>
-          <h3 class="text-xl md:text-2xl font-semibold mb-4">
+          <h3 class="text-xl md:text-2xl font-semibold mb-4" data-i18n="pricing.item1.title">
             ① 写真 高画質カラー化　1枚 500円
           </h3>
           <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
@@ -72,10 +90,10 @@
 
         <!-- ②動画化 -->
         <div>
-          <h3 class="text-xl md:text-2xl font-semibold mb-2">
+          <h3 class="text-xl md:text-2xl font-semibold mb-2" data-i18n="pricing.item2.title">
             ② 写真を動画化　1枚 500円
           </h3>
-          <p class="text-sm text-gray-400 mb-4">（表情や動きは要相談）</p>
+          <p class="text-sm text-gray-400 mb-4" data-i18n="pricing.item2.note">（表情や動きは要相談）</p>
           <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
                  autoplay muted playsinline loop>
             <source src="assets/videos/video-sample.mp4" type="video/mp4">
@@ -84,10 +102,10 @@
 
         <!-- ③ビデオレター -->
         <div>
-          <h3 class="text-xl md:text-2xl font-semibold mb-2">
+          <h3 class="text-xl md:text-2xl font-semibold mb-2" data-i18n="pricing.item3.title">
             ③ ビデオレター仕上げ動画　1分 3,000円
           </h3>
-          <p class="text-sm text-gray-400 mb-4">（セリフや内容は要相談）</p>
+          <p class="text-sm text-gray-400 mb-4" data-i18n="pricing.item3.note">（セリフや内容は要相談）</p>
           <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
                  autoplay muted playsinline loop>
             <source src="assets/videos/letter-sample.mp4" type="video/mp4">
@@ -102,16 +120,16 @@
   <section id="flow" class="py-16">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">
-        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="flow.heading">
           📦 ご依頼の流れ
         </span>
       </h2>
       <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
 
       <ol class="mt-10 space-y-4 text-lg leading-relaxed">
-        <li>① 連絡：Instagram DM または LINE</li>
-        <li>② 写真を送信：Instagram DM または LINE</li>
-        <li>③ 納品：修正は2回まで可能</li>
+        <li data-i18n="flow.step1">① 連絡：Instagram DM または LINE</li>
+        <li data-i18n="flow.step2">② 写真を送信：AIで加工を開始</li>
+        <li data-i18n="flow.step3">③ 納品：修正は3回までOK（通常1週間以内）</li>
       </ol>
     </div>
   </section>
@@ -120,7 +138,7 @@
   <section id="faq" class="py-16">
     <div class="mx-auto max-w-5xl px-6">
       <h2 class="text-center text-2xl md:text-3xl font-bold">
-        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="faq.heading">
           FAQ
         </span>
       </h2>
@@ -128,20 +146,20 @@
 
       <div class="mt-10 grid md:grid-cols-2 gap-10 text-sm text-gray-300">
         <div>
-          <h3 class="font-semibold text-yellow-300/90">納品までの日数は？</h3>
-          <p class="mt-2">通常 1週間以内。内容により前後します。</p>
+          <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q1">納品までの日数は？</h3>
+          <p class="mt-2" data-i18n="faq.a1">通常 1週間以内。内容により前後します。</p>
         </div>
         <div>
-          <h3 class="font-semibold text-yellow-300/90">支払い方法は？</h3>
-          <p class="mt-2">銀行振込 / PayPay / Amazonギフト券</p>
+          <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q2">支払い方法は？</h3>
+          <p class="mt-2" data-i18n="faq.a2">銀行振込 / PayPay / Amazonギフト券</p>
         </div>
         <div>
-          <h3 class="font-semibold text-yellow-300/90">どんな写真でも可能？</h3>
-          <p class="mt-2">解像度や状態により品質は変わります。まずはご相談ください。</p>
+          <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q3">どんな写真でも可能？</h3>
+          <p class="mt-2" data-i18n="faq.a3">解像度や状態により品質は変わります。まずはご相談ください。</p>
         </div>
         <div>
-          <h3 class="font-semibold text-yellow-300/90">プライバシーは守られますか？</h3>
-          <p class="mt-2">無許可でSNS掲載はしません。</p>
+          <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q4">プライバシーは守られますか？</h3>
+          <p class="mt-2" data-i18n="faq.a4">無許可でSNS掲載はしません。</p>
         </div>
       </div>
     </div>
@@ -150,7 +168,111 @@
   <!-- フッター -->
   <footer class="py-10 text-center text-xs text-gray-400">
     <div class="mx-auto h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent mb-4"></div>
-    <p>© 2025 スナスケ📷AIカメラマン</p>
+    <p data-i18n="footer.copy">© 2025 スナスケ📷AIカメラマン</p>
   </footer>
+
+  <!-- 多言語スクリプト -->
+  <script>
+    const dict = {
+      ja: {
+        title: 'スナスケ📷AIで写真復活　もう一度逢いたい人がいる',
+        'hero.title': 'もう一度逢いたい人がいる',
+        'hero.message': '過ぎ去った時間は戻せないけれど、写真が蘇れば、想いは永遠に生き続ける。',
+        'hero.subtitle': 'スナスケ📷AIで写真復活',
+        'pricing.heading': '料金',
+        'pricing.item1.title': '① 写真 高画質カラー化　1枚 500円',
+        'pricing.item2.title': '② 写真を動画化　1枚 500円',
+        'pricing.item2.note': '（表情や動きは要相談）',
+        'pricing.item3.title': '③ ビデオレター仕上げ動画　1分 3,000円',
+        'pricing.item3.note': '（セリフや内容は要相談）',
+        'flow.heading': '📦 ご依頼の流れ',
+        'flow.step1': '① 連絡：Instagram DM または LINE',
+        'flow.step2': '② 写真を送信：AIで加工を開始',
+        'flow.step3': '③ 納品：修正は3回までOK（通常1週間以内）',
+        'faq.heading': 'FAQ',
+        'faq.q1': '納品までの日数は？',
+        'faq.a1': '通常 1週間以内。内容により前後します。',
+        'faq.q2': '支払い方法は？',
+        'faq.a2': '銀行振込 / PayPay / Amazonギフト券',
+        'faq.q3': 'どんな写真でも可能？',
+        'faq.a3': '解像度や状態により品質は変わります。まずはご相談ください。',
+        'faq.q4': 'プライバシーは守られますか？',
+        'faq.a4': '無許可でSNS掲載はしません。',
+        'footer.copy': '© 2025 スナスケ📷AIカメラマン',
+        metaDescription: '古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。'
+      },
+      en: {
+        title: 'SunaSuke — Revive Photos with AI | Someone You Wish to Meet Again',
+        'hero.title': 'There’s someone you wish to meet again',
+        'hero.message': 'Time cannot be rewound, but when a photo is brought back to life, the feelings live on.',
+        'hero.subtitle': 'SunaSuke — Revive Photos with AI',
+        'pricing.heading': 'Pricing',
+        'pricing.item1.title': '① Photo colorization (high quality) — ¥500 per photo',
+        'pricing.item2.title': '② Animate a photo — ¥500 per photo',
+        'pricing.item2.note': '(Facial expressions and motion vary; details upon consultation.)',
+        'pricing.item3.title': '③ Video letter (final edit) — ¥3,000 per minute',
+        'pricing.item3.note': '(Script and content upon consultation.)',
+        'flow.heading': '📦 How It Works',
+        'flow.step1': '① Contact: Instagram DM or LINE',
+        'flow.step2': '② Send your photos: we start AI processing',
+        'flow.step3': '③ Delivery: up to 3 revisions (usually within one week)',
+        'faq.heading': 'FAQ',
+        'faq.q1': 'How long does delivery take?',
+        'faq.a1': 'Usually within one week; it may vary depending on the content.',
+        'faq.q2': 'How can I pay?',
+        'faq.a2': 'Bank transfer / PayPay / Amazon gift card',
+        'faq.q3': 'Can you handle any photo?',
+        'faq.a3': 'Quality depends on resolution and condition. Please consult us first.',
+        'faq.q4': 'Will my privacy be respected?',
+        'faq.a4': 'We never post your photos on social media without consent.',
+        'footer.copy': '© 2025 SunaSuke – AI Photographer',
+        metaDescription: 'Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent.'
+      }
+    };
+
+    const $ = (sel) => document.querySelectorAll(sel);
+
+    function applyLang(lang) {
+      const map = dict[lang] || dict.ja;
+
+      // 文章（data-i18n）
+      $('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (map[key]) el.innerHTML = map[key];
+      });
+
+      // タイトル
+      document.title = map.title;
+
+      // meta description 切替
+      const metas = document.querySelectorAll('meta[name="description"]');
+      metas.forEach(m => m.remove()); // 既存削除
+      const meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      meta.setAttribute('content', map.metaDescription);
+      document.head.appendChild(meta);
+
+      // html lang
+      document.documentElement.lang = (lang === 'en' ? 'en' : 'ja');
+
+      // ボタン表示
+      const btn = document.getElementById('langToggle');
+      btn.textContent = (lang === 'en') ? 'EN / 日本語' : '日本語 / EN';
+
+      localStorage.setItem('lang', lang);
+    }
+
+    // 初期言語：localStorage > ブラウザ設定 > ja
+    const initial =
+      localStorage.getItem('lang') ||
+      (navigator.language && navigator.language.startsWith('en') ? 'en' : 'ja');
+    applyLang(initial);
+
+    // トグル
+    document.getElementById('langToggle').addEventListener('click', () => {
+      const current = localStorage.getItem('lang') || initial;
+      applyLang(current === 'ja' ? 'en' : 'ja');
+    });
+  </script>
 </body>
 </html>
