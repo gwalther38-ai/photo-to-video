@@ -4,18 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>スナスケ📷AIで写真復活　もう一度逢いたい人がいる</title>
-  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。シンプル料金・埋め込みサンプルで分かりやすくご案内。無許可のSNS掲載はありません。" />
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
-</head>
-  <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>スナスケ📷AIで写真復活　もう一度逢いたい人がいる</title>
-  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。シンプル料金・埋め込みサンプルで分かりやすくご案内。無許可のSNS掲載はありません。" />
+  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。高級感ある仕上げとシンプル料金プランでご案内。無許可のSNS掲載はありません。" />
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -25,128 +14,79 @@
     }
   </style>
 </head>
-
-<body class="bg-gradient-to-br from-pink-50 via-white to-blue-50 text-gray-800">
-
-  <!-- ヘッダー -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-bold text-lg">スナスケ📷AIで写真復活　もう一度逢いたい人がいる</a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#pricing" class="hover:text-black">料金</a>
-        <a href="#flow" class="hover:text-black">ご依頼の流れ</a>
-        <a href="#faq" class="hover:text-black">FAQ</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-gray-200">☰</button>
-    </div>
-    <!-- モバイルメニュー -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white">
-      <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#pricing" class="hover:text-black">料金</a>
-        <a href="#flow" class="hover:text-black">ご依頼の流れ</a>
-        <a href="#faq" class="hover:text-black">FAQ</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-gradient-to-br from-white via-amber-50 to-yellow-100 text-gray-800">
 
   <!-- ヒーロー -->
-<section class="relative text-center py-12 md:py-16">
-  <h1 class="text-3xl md:text-5xl font-extrabold leading-tight font-serif">
-    もう一度逢いたい人がいる
-  </h1>
-  <p class="mt-4 text-lg text-gray-600">
-    スナスケ📷AIで写真復活
-  </p>
-</section>
+  <section class="relative text-center py-16 md:py-20">
+    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">もう一度逢いたい人がいる</h1>
+    <p class="mt-4 text-lg md:text-2xl text-gray-600">スナスケ📷AIで写真復活</p>
+  </section>
 
+  <!-- 料金 -->
+  <section id="pricing" class="py-14">
+    <div class="mx-auto max-w-3xl px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">料金</h2>
 
-<!-- 料金（枠なし・大きい縦動画） -->
-<section id="pricing" class="py-14">
-  <div class="mx-auto max-w-6xl px-4 text-center">
-    <h2 class="text-2xl md:text-3xl font-bold mb-8">料金</h2>
-
-    <!-- ① 写真 高画質カラー化 -->
-    <div class="mb-14">
-      <h3 class="text-xl md:text-2xl font-extrabold mb-4">
-        ① 写真 高画質カラー化　1枚 500円
-      </h3>
-      <!-- 枠なし・全幅（縦動画） -->
-      <div class="relative mx-auto w-full max-w-[520px] md:max-w-[620px]">
-        <div class="relative aspect-[9/16] overflow-hidden">
-          <video class="absolute inset-0 h-full w-full object-cover"
-                 autoplay muted playsinline loop>
+      <div class="space-y-12">
+        <!-- プラン① -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">① 写真 高画質カラー化　1枚 500円</h3>
+          <video class="mx-auto w-40 md:w-60 object-cover" autoplay muted playsinline loop>
             <source src="assets/videos/color-sample.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- プラン② -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">② 写真を動画化　1枚 500円<br/><span class="text-base text-gray-600">（表情や動きは要相談）</span></h3>
+          <video class="mx-auto w-40 md:w-60 object-cover" autoplay muted playsinline loop>
+            <source src="assets/videos/video-sample.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- プラン③ -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">③ ビデオレター仕上げ動画　1分 3,000円<br/><span class="text-base text-gray-600">（セリフや内容は要相談）</span></h3>
+          <video class="mx-auto w-40 md:w-60 object-cover" autoplay muted playsinline loop>
+            <source src="assets/videos/letter-sample.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
-
-   <!-- ② 写真を動画化 -->
-<div class="space-y-2 text-center">
-  <h3 class="text-xl md:text-2xl font-extrabold">
-    ② 写真を動画化　1枚 500円
-  </h3>
-  <p class="text-base md:text-lg text-gray-600">
-    （表情や動きは要相談）
-  </p>
-  <video class="w-full max-w-md mx-auto aspect-[9/16] object-cover" autoplay muted playsinline loop>
-    <source src="assets/videos/videoize-sample.mp4" type="video/mp4">
-  </video>
-</div>
-
-<!-- ③ ビデオレター仕上げ -->
-<div class="space-y-2 text-center mt-8">
-  <h3 class="text-xl md:text-2xl font-extrabold">
-    ③ ビデオレター仕上げ　1分 3,000円
-  </h3>
-  <p class="text-base md:text-lg text-gray-600">
-    （セリフや内容は要相談）
-  </p>
-  <video class="w-full max-w-md mx-auto aspect-[9/16] object-cover" autoplay muted playsinline loop>
-    <source src="assets/videos/letter-sample.mp4" type="video/mp4">
-  </video>
-</div>
-
-
+  </section>
 
   <!-- ご依頼の流れ -->
-  <section id="flow" class="py-14">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">📦 ご依頼の流れ</h2>
-      <ol class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
-        <li class="p-6 rounded-2xl bg-white shadow border border-gray-200">
-          <span class="font-semibold">1. 連絡</span><br/>Instagram DM または 公式LINE
-        </li>
-        <li class="p-6 rounded-2xl bg-white shadow border border-gray-200">
-          <span class="font-semibold">2. 写真を送信</span><br/>Instagram DM または LINE
-        </li>
-        <li class="p-6 rounded-2xl bg-white shadow border border-gray-200">
-          <span class="font-semibold">3. 納品</span><br/>修正は3回までOK（通常1週間以内に納品）
-        </li>
+  <section id="flow" class="py-14 bg-amber-50">
+    <div class="mx-auto max-w-5xl px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">📦 ご依頼の流れ</h2>
+      <ol class="space-y-6 text-lg">
+        <li>① 連絡：Instagram DM または LINE</li>
+        <li>② 写真を送信：AIで加工開始</li>
+        <li>③ 納品：修正は3回までOK（通常1週間以内）</li>
       </ol>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq" class="py-14">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-white shadow border border-gray-200">
-          <h3 class="font-semibold">どのくらいで納品できますか？</h3>
-          <p class="mt-2 text-sm text-gray-600">通常 <b>1週間以内</b>。内容により前後します。</p>
+    <div class="mx-auto max-w-5xl px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">FAQ</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-left text-gray-700">
+        <div>
+          <h3 class="font-semibold">納品までの日数は？</h3>
+          <p class="mt-2 text-sm">通常 1週間以内。内容により前後します。</p>
         </div>
-        <div class="p-6 rounded-2xl bg-white shadow border border-gray-200">
+        <div>
           <h3 class="font-semibold">支払い方法は？</h3>
-          <p class="mt-2 text-sm text-gray-600">銀行振込 / PayPay / Amazonギフト券（クレジットカード不可）</p>
+          <p class="mt-2 text-sm">銀行振込 / PayPay / Amazonギフト券</p>
         </div>
-        <div class="p-6 rounded-2xl bg-white shadow border border-gray-200">
+        <div>
           <h3 class="font-semibold">どんな写真でも可能？</h3>
-          <p class="mt-2 text-sm text-gray-600">解像度や欠損具合により品質は変わります。まずはご相談ください。</p>
+          <p class="mt-2 text-sm">解像度や状態により品質は変わります。まずはご相談ください。</p>
         </div>
-        <div class="p-6 rounded-2xl bg-white shadow border border-gray-200">
+        <div>
           <h3 class="font-semibold">プライバシーは守られますか？</h3>
-          <p class="mt-2 text-sm text-gray-600">無許可でSNS掲載はしません。掲載はご許可をいただいた場合のみ。</p>
+          <p class="mt-2 text-sm">無許可でSNS掲載はしません。</p>
         </div>
       </div>
     </div>
@@ -154,14 +94,7 @@
 
   <!-- フッター -->
   <footer class="py-10 text-center text-xs text-gray-500">
-    <p>© 2025 スナスケ📷AIで写真復活</p>
+    <p>© 2025 スナスケ📷AIカメラマン</p>
   </footer>
-
-  <script>
-    // モバイルメニュー開閉
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
-  </script>
 </body>
 </html>
