@@ -34,7 +34,9 @@
 
   <!-- Hero -->
   <section class="relative text-center py-16 md:py-24">
+    <!-- ほんのり金色のグロー -->
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.12),rgba(0,0,0,0)_55%)]"></div>
+
     <h1 class="relative z-10 text-3xl md:text-6xl font-extrabold leading-tight tracking-wide">
       もう一度逢いたい人がいる
     </h1>
@@ -43,6 +45,112 @@
     </p>
   </section>
 
-  <!-- 以下、料金・流れ・FAQ・フッターは元のまま -->
+  <!-- 料金 -->
+  <section id="pricing" class="py-14">
+    <div class="mx-auto max-w-3xl px-5 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-wide">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+          料金
+        </span>
+      </h2>
+
+      <!-- セパレーター -->
+      <div class="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
+
+      <div class="mt-10 space-y-14">
+
+        <!-- ①カラー化 -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-semibold mb-4">
+            ① 写真 高画質カラー化　1枚 500円
+          </h3>
+          <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
+                 autoplay muted playsinline loop>
+            <source src="assets/videos/color-sample.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- ②動画化 -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-semibold mb-2">
+            ② 写真を動画化　1枚 500円
+          </h3>
+          <p class="text-sm text-gray-400 mb-4">（表情や動きは要相談）</p>
+          <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
+                 autoplay muted playsinline loop>
+            <source src="assets/videos/video-sample.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- ③ビデオレター -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-semibold mb-2">
+            ③ ビデオレター仕上げ動画　1分 3,000円
+          </h3>
+          <p class="text-sm text-gray-400 mb-4">（セリフや内容は要相談）</p>
+          <video class="mx-auto w-full max-w-[480px] aspect-[9/16] object-cover"
+                 autoplay muted playsinline loop>
+            <source src="assets/videos/letter-sample.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ご依頼の流れ -->
+  <section id="flow" class="py-16">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+          📦 ご依頼の流れ
+        </span>
+      </h2>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
+
+      <ol class="mt-10 space-y-4 text-lg leading-relaxed">
+        <li>① 連絡：Instagram DM または LINE</li>
+        <li>② 写真を送信：AIで加工を開始</li>
+        <li>③ 納品：修正は3回までOK（通常1週間以内）</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16">
+    <div class="mx-auto max-w-5xl px-6">
+      <h2 class="text-center text-2xl md:text-3xl font-bold">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
+          FAQ
+        </span>
+      </h2>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-10 text-sm text-gray-300">
+        <div>
+          <h3 class="font-semibold text-yellow-300/90">納品までの日数は？</h3>
+          <p class="mt-2">通常 1週間以内。内容により前後します。</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-yellow-300/90">支払い方法は？</h3>
+          <p class="mt-2">銀行振込 / PayPay / Amazonギフト券</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-yellow-300/90">どんな写真でも可能？</h3>
+          <p class="mt-2">解像度や状態により品質は変わります。まずはご相談ください。</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-yellow-300/90">プライバシーは守られますか？</h3>
+          <p class="mt-2">無許可でSNS掲載はしません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="py-10 text-center text-xs text-gray-400">
+    <div class="mx-auto h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent mb-4"></div>
+    <p>© 2025 スナスケ📷AIカメラマン</p>
+  </footer>
 </body>
 </html>
