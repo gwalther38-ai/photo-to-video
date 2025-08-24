@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">スナスケ📷AIで写真復活　もう一度逢いたい人がいる</title>
-  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。" data-i18n-meta="description-ja" />
-  <meta name="description" content="Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent." data-i18n-meta="description-en" />
+  <title data-i18n="title">スナスケ AIで写真復活　もう一度逢いたい人がいる</title>
+  <meta name="description" content="古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,14 +27,12 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    /* description を2つ入れているので、JS適用前は最初のmetaだけ有効。
-       起動時にJSで適切な方へ切替します。*/
   </style>
 </head>
 
 <body class="min-h-screen text-gray-200 bg-gradient-to-br from-[#0b0b0e] via-[#111214] to-[#1a1b1f] font-serif">
 
-  <!-- 言語切替ボタン（右上固定） -->
+  <!-- 言語切替ボタン -->
   <div class="fixed top-4 right-4 z-50">
     <button id="langToggle"
       class="px-3 py-1.5 text-sm rounded-full border border-yellow-400/60 text-yellow-300 hover:bg-yellow-500/10 transition"
@@ -46,20 +43,14 @@
 
   <!-- Hero -->
   <section class="relative text-center py-16 md:py-24">
-    <!-- ほんのり金色のグロー -->
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.12),rgba(0,0,0,0)_55%)]"></div>
 
     <h1 class="relative z-10 text-3xl md:text-6xl font-extrabold leading-tight tracking-wide" data-i18n="hero.title">
       もう一度逢いたい人がいる
     </h1>
 
-    <!-- 中央メッセージ -->
-    <p class="relative z-10 mt-6 text-base md:text-xl text-gray-300 leading-relaxed" data-i18n="hero.message">
-
-    </p>
-
     <p class="relative z-10 mt-5 text-lg md:text-2xl bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="hero.subtitle">
-      スナスケ📷AIで写真復活
+      スナスケ AIで写真復活
     </p>
   </section>
 
@@ -72,7 +63,6 @@
         </span>
       </h2>
 
-      <!-- セパレーター -->
       <div class="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
 
       <div class="mt-10 space-y-14">
@@ -168,17 +158,16 @@
   <!-- フッター -->
   <footer class="py-10 text-center text-xs text-gray-400">
     <div class="mx-auto h-px w-24 bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent mb-4"></div>
-    <p data-i18n="footer.copy">© 2025 スナスケ📷AIカメラマン</p>
+    <p data-i18n="footer.copy">© 2025 スナスケ AIカメラマン</p>
   </footer>
 
   <!-- 多言語スクリプト -->
   <script>
     const dict = {
       ja: {
-        title: 'スナスケ📷AIで写真復活　もう一度逢いたい人がいる',
+        title: 'スナスケ AIで写真復活　もう一度逢いたい人がいる',
         'hero.title': 'もう一度逢いたい人がいる',
-        'hero.message': '過ぎ去った時間は戻せないけれど、写真が蘇れば、想いは永遠に生き続ける。',
-        'hero.subtitle': 'スナスケ📷AIで写真復活',
+        'hero.subtitle': 'スナスケ AIで写真復活',
         'pricing.heading': '料金',
         'pricing.item1.title': '① 写真 高画質カラー化　1枚 500円',
         'pricing.item2.title': '② 写真を動画化　1枚 500円',
@@ -198,77 +187,59 @@
         'faq.a3': '解像度や状態により品質は変わります。まずはご相談ください。',
         'faq.q4': 'プライバシーは守られますか？',
         'faq.a4': '無許可でSNS掲載はしません。',
-        'footer.copy': '© 2025 スナスケ📷AIカメラマン',
+        'footer.copy': '© 2025 スナスケ AIカメラマン',
         metaDescription: '古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。'
       },
-     en: {
-  title: 'SunaSuke — Revive Photos with AI | Someone You Wish to Meet Again',
-  'hero.title': 'There’s someone you wish to meet again',
-  'hero.message': 'Time cannot be rewound, but when a photo is brought back to life, the feelings live on.',
-  'hero.subtitle': 'SunaSuke — Revive Photos with AI',
-  'pricing.heading': 'Pricing',
-  'pricing.item1.title': '① Photo colorization (high quality) — $4 per photo',
-  'pricing.item2.title': '② Animate a photo — $4 per photo',
-  'pricing.item2.note': '(Facial expressions and motion vary; details upon consultation.)',
-  'pricing.item3.title': '③ Video letter (final edit) — $35 per minute',
-  'pricing.item3.note': '(Script and content upon consultation.)',
-  'flow.heading': '📦 How It Works',
-  'flow.step1': '① Contact: Instagram DM or LINE',
-  'flow.step2': '② Send your photos: we start AI processing',
-  'flow.step3': '③ Delivery: up to 3 revisions (usually within one week)',
-  'faq.heading': 'FAQ',
-  'faq.q1': 'How long does delivery take?',
-  'faq.a1': 'Usually within one week; it may vary depending on the content.',
-  'faq.q2': 'How can I pay?',
-  'faq.a2': 'PayPal / Other methods upon consultation',
-  'faq.q3': 'Can you handle any photo?',
-  'faq.a3': 'Quality depends on resolution and condition. Please consult us first.',
-  'faq.q4': 'Will my privacy be respected?',
-  'faq.a4': 'We never post your photos on social media without consent.',
-  'footer.copy': '© 2025 SunaSuke – AI Photographer',
-  metaDescription: 'Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent.'
-}
-
+      en: {
+        title: 'SunaSuke — Revive Photos with AI | Someone You Wish to Meet Again',
+        'hero.title': 'There’s someone you wish to meet again',
+        'hero.subtitle': 'SunaSuke — Revive Photos with AI',
+        'pricing.heading': 'Pricing',
+        'pricing.item1.title': '① Photo colorization (high quality) — $4 per photo',
+        'pricing.item2.title': '② Animate a photo — $4 per photo',
+        'pricing.item2.note': '(Facial expressions and motion vary; details upon consultation.)',
+        'pricing.item3.title': '③ Video letter (final edit) — $35 per minute',
+        'pricing.item3.note': '(Script and content upon consultation.)',
+        'flow.heading': '📦 How It Works',
+        'flow.step1': '① Contact: Instagram DM or LINE',
+        'flow.step2': '② Send your photos: we start AI processing',
+        'flow.step3': '③ Delivery: up to 3 revisions (usually within one week)',
+        'faq.heading': 'FAQ',
+        'faq.q1': 'How long does delivery take?',
+        'faq.a1': 'Usually within one week; it may vary depending on the content.',
+        'faq.q2': 'How can I pay?',
+        'faq.a2': 'PayPal / Other methods upon consultation',
+        'faq.q3': 'Can you handle any photo?',
+        'faq.a3': 'Quality depends on resolution and condition. Please consult us first.',
+        'faq.q4': 'Will my privacy be respected?',
+        'faq.a4': 'We never post your photos on social media without consent.',
+        'footer.copy': '© 2025 SunaSuke – AI Photographer',
+        metaDescription: 'Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent.'
+      }
+    };
 
     const $ = (sel) => document.querySelectorAll(sel);
 
     function applyLang(lang) {
       const map = dict[lang] || dict.ja;
-
-      // 文章（data-i18n）
       $('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (map[key]) el.innerHTML = map[key];
       });
-
-      // タイトル
       document.title = map.title;
-
-      // meta description 切替
-      const metas = document.querySelectorAll('meta[name="description"]');
-      metas.forEach(m => m.remove()); // 既存削除
-      const meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      meta.setAttribute('content', map.metaDescription);
-      document.head.appendChild(meta);
-
-      // html lang
       document.documentElement.lang = (lang === 'en' ? 'en' : 'ja');
-
-      // ボタン表示
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', map.metaDescription);
       const btn = document.getElementById('langToggle');
       btn.textContent = (lang === 'en') ? 'EN / 日本語' : '日本語 / EN';
-
       localStorage.setItem('lang', lang);
     }
 
-    // 初期言語：localStorage > ブラウザ設定 > ja
     const initial =
       localStorage.getItem('lang') ||
       (navigator.language && navigator.language.startsWith('en') ? 'en' : 'ja');
     applyLang(initial);
 
-    // トグル
     document.getElementById('langToggle').addEventListener('click', () => {
       const current = localStorage.getItem('lang') || initial;
       applyLang(current === 'ja' ? 'en' : 'ja');
