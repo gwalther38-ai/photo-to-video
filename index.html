@@ -12,7 +12,7 @@
   <!-- Google Fonts 明朝系 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind 設定：serif を Noto Serif JP に -->
+  <!-- Tailwind 設定 -->
   <script>
     tailwind.config = {
       theme: {
@@ -118,7 +118,7 @@
 
       <ol class="mt-10 space-y-4 text-lg leading-relaxed">
         <li data-i18n="flow.step1">① 連絡：Instagram DM または LINE</li>
-        <li data-i18n="flow.step2">② 写真を送信：AIで加工を開始</li>
+        <li data-i18n="flow.step2">② 写真を送信：Instagram DM または LINEにて</li>
         <li data-i18n="flow.step3">③ 納品：修正は3回までOK（通常1週間以内）</li>
       </ol>
     </div>
@@ -137,7 +137,7 @@
       <div class="mt-10 grid md:grid-cols-2 gap-10 text-sm text-gray-300">
         <div>
           <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q1">納品までの日数は？</h3>
-          <p class="mt-2" data-i18n="faq.a1">通常 1週間以内。内容により前後します。</p>
+          <p class="mt-2" data-i18n="faq.a1">通常 3日以内。1時間程度で対応できる場合もあります。</p>
         </div>
         <div>
           <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q2">支払い方法は？</h3>
@@ -151,6 +151,20 @@
           <h3 class="font-semibold text-yellow-300/90" data-i18n="faq.q4">プライバシーは守られますか？</h3>
           <p class="mt-2" data-i18n="faq.a4">無許可でSNS掲載はしません。</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact" class="py-16">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">
+        <span class="bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent" data-i18n="contact.heading">
+          お問い合わせ
+        </span>
+      </h2>
+      <div class="text-sm text-gray-300" data-i18n="contact.content">
+        <!-- JSで切替 -->
       </div>
     </div>
   </section>
@@ -176,17 +190,19 @@
         'pricing.item3.note': '（セリフや内容は要相談）',
         'flow.heading': '📦 ご依頼の流れ',
         'flow.step1': '① 連絡：Instagram DM または LINE',
-        'flow.step2': '② 写真を送信：AIで加工を開始',
+        'flow.step2': '② 写真を送信：Instagram DM または LINEにて',
         'flow.step3': '③ 納品：修正は3回までOK（通常1週間以内）',
         'faq.heading': 'FAQ',
         'faq.q1': '納品までの日数は？',
-        'faq.a1': '通常 1週間以内。内容により前後します。',
+        'faq.a1': '通常 3日以内。1時間程度で対応できる場合もあります。',
         'faq.q2': '支払い方法は？',
         'faq.a2': '銀行振込 / PayPay / Amazonギフト券',
         'faq.q3': 'どんな写真でも可能？',
         'faq.a3': '解像度や状態により品質は変わります。まずはご相談ください。',
         'faq.q4': 'プライバシーは守られますか？',
         'faq.a4': '無許可でSNS掲載はしません。',
+        'contact.heading': 'お問い合わせ',
+        'contact.content': '<a href="https://lin.ee/otuQxl6" target="_blank" class="inline-flex items-center gap-2"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE" class="h-8"/>LINEでお問い合わせ</a>',
         'footer.copy': '© 2025 スナスケ AIカメラマン',
         metaDescription: '古い写真をAIでカラー化・高画質化して動画化。重厚で上質なトーンのサイトデザイン。無許可でSNS掲載はしません。'
       },
@@ -202,17 +218,19 @@
         'pricing.item3.note': '(Script and content upon consultation.)',
         'flow.heading': '📦 How It Works',
         'flow.step1': '① Contact: Instagram DM or LINE',
-        'flow.step2': '② Send your photos: we start AI processing',
+        'flow.step2': '② Send your photos via Instagram DM or LINE',
         'flow.step3': '③ Delivery: up to 3 revisions (usually within one week)',
         'faq.heading': 'FAQ',
         'faq.q1': 'How long does delivery take?',
-        'faq.a1': 'Usually within one week; it may vary depending on the content.',
+        'faq.a1': 'Usually within 3 days. In some cases, we can respond within an hour.',
         'faq.q2': 'How can I pay?',
         'faq.a2': 'PayPal / Other methods upon consultation',
         'faq.q3': 'Can you handle any photo?',
         'faq.a3': 'Quality depends on resolution and condition. Please consult us first.',
         'faq.q4': 'Will my privacy be respected?',
         'faq.a4': 'We never post your photos on social media without consent.',
+        'contact.heading': 'Contact',
+        'contact.content': '<p>Email: <a href="mailto:sunasuke.ai@gmail.com" class="underline">sunasuke.ai@gmail.com</a></p>',
         'footer.copy': '© 2025 SunaSuke – AI Photographer',
         metaDescription: 'Restore and colorize old photos with AI and turn them into videos. Elegant dark-gold design. We never post without consent.'
       }
